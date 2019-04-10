@@ -12,7 +12,7 @@ class Demo extends Component {
       min: 0,
       color: '#00ff00',
       step: 10,
-      value: 50,
+      value: 0,
       radius: 100
     }
   }
@@ -71,7 +71,7 @@ class Demo extends Component {
         />
         <div />
         <Roundy
-          allowClick
+          allowClick={false}
           value={this.state.value}
           radius={parseInt(radius)}
           min={parseInt(min)}

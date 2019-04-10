@@ -55,7 +55,6 @@ class Roundy extends Component {
   }
 
   getTouchMove = e => {
-    // e.preventDefault()
     e.stopPropagation()
     if (this.allowChange || this.isDrag) {
       let idx = 0
@@ -77,7 +76,7 @@ class Roundy extends Component {
     // e.preventDefault()
     // we update first value, then we decide based on rotation
     if (!this.isDrag) {
-      this.updateValue(e, true)
+      this.updateValue(e, this.props.allowClick)
     }
     this.allowChange = true
     this.isDrag = true
